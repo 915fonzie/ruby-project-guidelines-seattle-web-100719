@@ -1,6 +1,7 @@
 require 'pry'
 require_relative 'create_new_user'
 require_relative 'high_score'
+require_relative 'returning_user'
 
 class MainMenu
 
@@ -17,24 +18,21 @@ class MainMenu
         print "\n\n\n\n"
     end
 
-    def self.getInput
+    def self.selections
         print "Please type in a number choice: "
         input = STDIN.gets.chomp
-    end
-
-    def self.selections(input)
         case input
         when "1"
-            CreateNewUser.fullName
+            CreateNewUser.creatingNewUser
         when "2"
-            puts "the second"
+            ReturningUser.findUser
         when "3"
             HighScore.highScoreGrid
         when "4"
             return
         else
-            puts "You did not input any of the given choices, try again."
-            MainMenu.selections(getInput())
+            puts "\nYou did not input any of the given choices, try again."
+            MainMenu.selections
         end
     end
 end

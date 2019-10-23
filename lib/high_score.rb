@@ -13,7 +13,7 @@ class HighScore
         input = STDIN.gets.chomp
         if input != nil
             MainMenu.printMenu
-            MainMenu.selections(MainMenu.getInput)
+            MainMenu.selections
         end
     end
 end
