@@ -46,16 +46,16 @@ class ReturningUser
     end
     def self.changeName(fname, lname)
         full_name = []
-        name = Users.find_by(first_name: fname,last_name: lname)
+        user = Users.find_by(first_name: fname,last_name: lname)
         print "What is the new first name: "
         new_fname = STDIN.gets.chomp
         print "What is the new last name: "
         new_lname = STDIN.gets.chomp
-        name.first_name = new_fname
-        name.last_name = new_lname
-        name.save
-        full_name[0] = name.first_name
-        full_name[1] = name.last_name
+        user.first_name = new_fname
+        user.last_name = new_lname
+        user.save
+        full_name[0] = user.first_name
+        full_name[1] = user.last_name
         full_name
     end
 end

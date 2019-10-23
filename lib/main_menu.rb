@@ -3,9 +3,9 @@ require_relative 'create_new_user'
 require_relative 'high_score'
 require_relative 'returning_user'
 require_relative 'how_to_play'
+require_relative 'game_play'
 
 class MainMenu
-
     def self.logo
         print "test test test\n\n"
     end
