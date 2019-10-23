@@ -1,3 +1,5 @@
+require_relative 'users'
+
 class HighScore
     def self.highScoreGrid
         system "clear"
@@ -9,7 +11,7 @@ class HighScore
         end
         print " ________________________\n\n\n\n\n\n"
 
-        print "Please enter any value or character to return to the Main Menu: "
+        print "Please press ENTER to return to the Main Menu "
         input = STDIN.gets.chomp
         if input != nil
             MainMenu.printMenu

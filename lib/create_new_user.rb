@@ -1,7 +1,7 @@
 class CreateNewUser
     def self.creatingNewUser
-        system "clear"
         name = Users.create
+        system "clear"
         print "What is your First name: "
         name.first_name = STDIN.gets.chomp
         print "\nWhat is your Last name: "
@@ -9,6 +9,7 @@ class CreateNewUser
         name.high_score = 0
         name.tries_left = 6
         name.save
+        system "clear"
         print "Thank you for creating an account with us #{name.first_name}!\n\n\n\n"
         subMenuOptions
     end
