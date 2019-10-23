@@ -24,7 +24,7 @@ class CreateNewUser
             puts "still not implemented"
         else
             puts "You did not input any of the given choices, try again."
-            CreateNewUser.subMenuOptions
+            subMenuOptions
         end
     end
 end

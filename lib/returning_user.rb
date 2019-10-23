@@ -24,7 +24,6 @@ class ReturningUser
                 findUser
             end
         end
-
     end
 
     def self.subMenuOptions
