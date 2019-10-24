@@ -7,23 +7,21 @@ require_relative 'game_play'
 
 class MainMenu
     def self.logo
-        print "   ______                            ______ __            __\n"
-        print "  / ____/__  __ ___   _____ _____   /_  __// /_   ____ _ / /_\n"
-        print ' / / __ / / / // _ \ / ___// ___/    / /  / __ \ / __ `// __/'
-        print "\n"
-        print "/ /_/ // /_/ //  __/(__  )(__  )    / /  / / / // /_/ // /_\n" 
-        print '\____/ \__._/ \___//____//____/    /_/  /_/ /_/ \__._/ \__/'
-        print "\n"
+        puts "   ______                            ______ __            __"
+        puts "  / ____/__  __ ___   _____ _____   /_  __// /_   ____ _ / /_"
+        puts ' / / __ / / / // _ \ / ___// ___/    / /  / __ \ / __ `// __/'
+        puts "/ /_/ // /_/ //  __/(__  )(__  )    / /  / / / // /_/ // /_" 
+        puts '\____/ \__._/ \___//____//____/    /_/  /_/ /_/ \__._/ \__/'
         banner = File.read('./lib/Pokemon_title.txt')
-        print banner
+        puts banner
 
     end
     def self.printMenu
         system "clear"
         self.logo
-        print "1. Create New User\n"
-        print "2. Returning User\n"
-        print "3. High Scores\n"
+        puts "1. Create New User"
+        puts "2. Returning User"
+        puts "3. High Scores\n"
         print "4. How to Play\n"
         print "5. Exit\n"
         print "\n\n"
