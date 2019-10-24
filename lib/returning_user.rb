@@ -1,4 +1,5 @@
 require_relative 'main_menu'
+require_relative 'game_play'
 
 class ReturningUser
     def self.findUser
@@ -38,7 +39,8 @@ class ReturningUser
             print "Your name has successfully been updated!\n"
             subMenuOptions(full_name[0], full_name[1])
         when "3"
-            puts "still not implemented"
+            user = Users.find_by(first_name: fname, last_name: lname)
+            GamePlay.playGame(user)
         else
             puts "You did not input any of the given choices, try again."
             subMenuOptions(fname, lname)
