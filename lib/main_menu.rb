@@ -7,13 +7,13 @@ require_relative 'game_play'
 
 class MainMenu
     def self.logo
-        puts "   ______                            ______ __            __"
-        puts "  / ____/__  __ ___   _____ _____   /_  __// /_   ____ _ / /_"
-        puts ' / / __ / / / // _ \ / ___// ___/    / /  / __ \ / __ `// __/'
-        puts "/ /_/ // /_/ //  __/(__  )(__  )    / /  / / / // /_/ // /_" 
-        puts '\____/ \__._/ \___//____//____/    /_/  /_/ /_/ \__._/ \__/'
+        puts "   ______                            ______ __            __".bold.red
+        puts "  / ____/__  __ ___   _____ _____   /_  __// /_   ____ _ / /_".bold.red
+        puts ' / / __ / / / // _ \ / ___// ___/    / /  / __ \ / __ `// __/'.bold.white
+        puts "/ /_/ // /_/ //  __/(__  )(__  )    / /  / / / // /_/ // /_" .bold.red
+        puts '\____/ \__._/ \___//____//____/    /_/  /_/ /_/ \__._/ \__/'.bold.red
         banner = File.read('./lib/Pokemon_title.txt')
-        puts banner
+        puts banner.bold.yellow
 
     end
     def self.printMenu
@@ -40,7 +40,7 @@ class MainMenu
         when "4"
             HowToPlay.description
         when "5"
-            return
+            exit
         else
             puts "\nYou did not input any of the given choices, try again."
             MainMenu.selections

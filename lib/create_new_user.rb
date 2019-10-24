@@ -7,6 +7,7 @@ class CreateNewUser
         print "\nWhat is your Last name: "
         user.last_name = STDIN.gets.chomp
         user.high_score = 0
+        user.current_score = 0
         user.tries_left = 6
         user.save
         system "clear"
