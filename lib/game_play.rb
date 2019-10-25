@@ -4,10 +4,10 @@ require 'pry'
 class GamePlay
     def self.playGame(user)
         system "clear"
-        # rand_id_array = (1..Pokemons.count).to_a.shuffle
-        # if UsersPokemons.find_by(user_id: user.id,pokemon_id: rand_id)
-        #     playGame(user)
-        # end
+        rand_id_array = rand(1..Pokemons.count)
+        if UsersPokemons.find_by(user_id: user.id,pokemon_id: rand_id)
+            playGame(user)
+        end
         rand_pokemon = Pokemons.find_by(id: rand_id)
         puts rand_pokemon.ascii.magenta.on_white
         puts "What is the name of this Pokemon? "
