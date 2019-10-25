@@ -9,7 +9,7 @@ class GamePlay
             playGame(user)
         end
         rand_pokemon = Pokemons.find_by(id: rand_id)
-        puts rand_pokemon.ascii.magenta.on_white
+        puts rand_pokemon.ascii.black.on_white
         puts "What is the name of this Pokemon? "
         all_answer_choices = []
         all_answer_choices.push(rand_pokemon)
