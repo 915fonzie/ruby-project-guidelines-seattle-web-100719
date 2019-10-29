@@ -8,7 +8,7 @@ class CreateNewUser
         user.last_name = STDIN.gets.chomp
         user.high_score = 0
         user.current_score = 0
-        user.tries_left = 6
+        user.tries_left = 5
         user.save
         system "clear"
         print "Thank you for creating an account with us #{user.first_name}!\n\n\n\n"
